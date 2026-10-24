@@ -2,7 +2,7 @@
 
 **Погода в любом городе мира: сейчас, по часам и на неделю. Оформление меняется под погоду и время суток.**
 
-### ▶️ [Открыть приложение](https://mmmaksmog-commits.github.io/weather-app/)
+### ▶️ [Открыть приложение](https://mysik-portfolio.vercel.app/weather-app/)
 
 ---
 
