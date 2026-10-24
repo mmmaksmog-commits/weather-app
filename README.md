@@ -2,7 +2,7 @@
 
 **Погода в любом городе мира: сейчас, по часам и на неделю. Оформление меняется под погоду и время суток.**
 
-### ▶️ [Открыть приложение](https://YOUR_GITHUB.github.io/weather-app/)
+### ▶️ [Открыть приложение](https://mmmaksmog-commits.github.io/weather-app/)
 
 ---
 
@@ -35,7 +35,7 @@ js/
 ## Запуск локально
 
 ```bash
-git clone https://github.com/YOUR_GITHUB/weather-app.git
+git clone https://github.com/mmmaksmog-commits/weather-app.git
 cd weather-app
 python3 -m http.server 8000
 ```
