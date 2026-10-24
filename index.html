@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Небо</title>
+  <meta name="description" content="Погода в любом городе: сейчас, по часам и на неделю. Open-Meteo API.">
+  <meta name="theme-color" content="#3b6fd8">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-theme="clear" data-day="1">
+  <div class="sky" aria-hidden="true"><div class="particles" id="particles"></div></div>
+
+  <div class="app">
+    <header class="top">
+      <form class="search" id="searchForm" role="search" autocomplete="off">
+        <svg class="search__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+        <input id="searchInput" class="search__input" type="search" placeholder="Найти город" aria-label="Найти город" enterkeyhint="search">
+        <ul class="suggest" id="suggest" role="listbox" hidden></ul>
+      </form>
+      <button class="glass-btn" id="geoBtn" aria-label="Моё местоположение" title="Моё местоположение"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 21 3l-8 18-2-8z"/></svg></button>
+      <button class="glass-btn" id="unitBtn" aria-label="Единицы измерения">°C</button>
+    </header>
+
+    <nav class="favs" id="favs" aria-label="Избранные города"></nav>
+
+    <main id="main" aria-live="polite">
+      <section class="now">
+        <div class="now__place">
+          <h1 id="city" class="now__city">—</h1>
+          <button class="star" id="starBtn" aria-label="Добавить в избранное">☆</button>
+        </div>
+        <p id="region" class="now__region"></p>
+        <div class="now__main">
+          <span id="nowIcon" class="now__icon">⛅</span>
+          <span id="nowTemp" class="now__temp">--°</span>
+        </div>
+        <p id="nowText" class="now__text">Загрузка…</p>
+        <p id="nowRange" class="now__range"></p>
+      </section>
+
+      <section class="glass">
+        <h2 class="glass__title">Почасовой прогноз</h2>
+        <div class="hourly" id="hourly"></div>
+      </section>
+
+      <div class="grid">
+        <section class="glass">
+          <h2 class="glass__title">На 7 дней</h2>
+          <ul class="daily" id="daily"></ul>
+        </section>
+        <section class="details" id="details"></section>
+      </div>
+    </main>
+
+    <div class="error glass" id="error" hidden></div>
+
+    <footer class="foot">Данные: <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a></footer>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
